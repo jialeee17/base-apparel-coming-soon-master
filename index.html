@@ -5,29 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!--Stylesheet-->
+  <link rel="stylesheet" href="scss/main.css">
 </head>
 <body>
 
-  We're coming soon
+  <div class="grid-container">
+    <div class="col item1 container">
+      <header class="header">
+        <img src="images/logo.svg" alt="" class="img-logo">
+      </header>
+    </div> <!--End of grid item1-->
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+    <div class="col item2">
+      <div class="banner desktop-hide">
+        <img src="images/hero-mobile.jpg" alt="" class="img-banner img-banner--mobile">
+      </div>
+      <div class="banner mobile-hide">
+        <img src="images/hero-desktop.jpg" alt="" class="img-banner img-banner--desktop">
+      </div>
+    </div> <!--End of grid item2-->
 
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+    <div class="col item3">
+      <main class="main">
+        <div class="container">
+          <h1 class="title"><span>We're</span><br>coming<br>soon</h1>
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion store. 
+            Add your email below to stay up-to-date with announcements and our launch deals.
+          </p>
+
+          <div class="email-wrapper">
+            <input type="text" placeholder="Email Address" class="emailAddress">
+            <img src="images/icon-arrow.svg" alt="Email submit button" class="btn-submit">
+          </div>
+        </div>
+      </main>
+    </div> <!--End of grid item3-->
+  </div> <!-- End of grid container-->
+
+  <script>
+    const button_submit = document.querySelector('.btn-submit');
+
+    button_submit.addEventListener('click', () => {
+      window.alert('😿It\'s just for demonstration purposes.');
+    })
+  </script>
 </body>
 </html>
